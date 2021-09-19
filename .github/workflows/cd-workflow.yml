@@ -1,13 +1,14 @@
-# This file wont do us much good in this location, make sure you change the path as directed to continue!
 
 name: Docker CD
 
 on:
-  workflow_dispatch:
-  
   push:
     paths:
       - "**Dockerfile**"
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+  
 jobs:
   build:
     runs-on: ubuntu-latest
